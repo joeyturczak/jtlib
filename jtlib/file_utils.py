@@ -64,3 +64,7 @@ def create_text_file(path, text):
     file = open(path, 'w')
     file.writelines(text)
     file.close()
+
+
+if __name__ == '__main__':
+    pass
