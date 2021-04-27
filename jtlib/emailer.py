@@ -18,7 +18,7 @@ def create_outlook_message(body, subject, to, cc='', bcc='', attachments=[], aut
 
     if attachments:
         for a in attachments:
-            message.attachments.Add(a)
+            message.Attachments.Add(a)
 
     if auto_send:
         message.Send()
