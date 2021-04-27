@@ -7,7 +7,7 @@ def create_outlook_message(body, subject, to, cc='', bcc='', attachments=[], aut
     outlook = win32.gencache.EnsureDispatch('Outlook.Application')
 
     message = outlook.CreateItem(0)
-    message.To = recipients
+    message.To = to
     if cc:
         message.CC = cc
     if bcc:
