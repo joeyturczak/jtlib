@@ -9,7 +9,7 @@ URL = 'https://github.com/joeyturczak/jtlib'
 EMAIL = 'joeyturczak@gmail.com'
 AUTHOR = 'Joey Turczak'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.1.1'
+VERSION = '0.1.2'
 LICENSE = 'MIT'
 
 # Required packages
