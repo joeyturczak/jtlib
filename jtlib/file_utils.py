@@ -33,7 +33,7 @@ def get_files_list(directory='/', extensions='', startswith='',
 
         files[:] = [f for f in files if os.path.basename(os.path.dirname(f)) not in exclude_dirs]
     else:
-        files = [file_dir + f for f in os.listdir(directory)
+        files = [os.path.join(file_dir, f) for f in os.listdir(directory)
                  if f.startswith(startswith) and f.endswith(extensions)]
     return files
 
