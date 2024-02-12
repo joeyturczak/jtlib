@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 import win32com.client as win32
-import os
 
 
 def create_outlook_message(body, subject, to, cc='', bcc='', attachments=[], auto_send=False):
-    outlook = win32.gencache.EnsureDispatch('Outlook.Application')
+    try:
+        outlook = win32.GetActiveObject('Outlook.Application')
+    except:
+        outlook = win32.DispatchEx('Outlook.Application')
 
     message = outlook.CreateItem(0)
     message.To = to
